@@ -1,0 +1,33 @@
+<div class="box-form">
+    <h3>CADASTRO</h3>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    <hr style="border-color: #7E7B7C">
+
+    <form action="#" method="POST">{% csrf_token %}
+        <label for="username">Username:</label> 
+        <input type="text" class="form-control" placeholder="Username..." name="username" id="username">
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" placeholder="E-mail..." name="email" id="email">
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" placeholder="Senha..." name="senha" id="senha">
+            </div>
+
+            <div class="col-md">
+                <label for="confirm_senha">Confirmar senha:</label>
+                <input type="password" class="form-control" placeholder="Confirmar senha..." name="confirmar_senha" id="confirm_senha">
+            </div>
+        </div>
+        <a href="#" class="link">Já possuo uma conta</a>
+        <br>
+        <br>
+        <input type="submit" value="CADASTRAR" class="btn-principal">
+    </form>
+</div>
