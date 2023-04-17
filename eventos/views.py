@@ -59,7 +59,7 @@ def gerenciar_evento(request):
         eventos = Evento.objects.filter(criador=request.user)
 
         if nome:
-            eventos = Evento.objects.filter(nome__contains=nome)
+            eventos = Evento.objects.filter(nome__contains=nome, criador=request.user)
 
         return render(request, 'gerenciar_evento.html', {'eventos': eventos})
     
