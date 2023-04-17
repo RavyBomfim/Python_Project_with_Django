@@ -1,7 +1,6 @@
+from eventos.models import Certificado
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-
-from eventos.models import Certificado
 # Create your views here.
 
 @login_required

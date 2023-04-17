@@ -48,7 +48,7 @@
             <h5>Procurar certificado</h5>
             <br>
             <form action="{% url 'procurar_certificado' evento.id %}" method="POST">
-                <input type="email" class="form-control" placeholder="Digite o e-mail" name="email">{% csrf_token %}
+                <input type="email" style="width: 50%;" class="form-control" placeholder="Digite o e-mail" name="email">{% csrf_token %}
                 <br>
                 <input type="submit" value="BUSCAR" class="btn btn-primary">
             </form>
